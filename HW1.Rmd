@@ -1,0 +1,76 @@
+---
+title: "Homework 1"
+author: "Hari Subramanian"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+# Q1. Load releant libraries
+```{r eval=FALSE}
+#Packages
+library(tidyverse) #Loading Tidyverse package in the notebook
+library(haven) #for read_dta function. Importing a .dta file
+```
+
+# Q2. Import Data
+```{r}
+#importing dataset from the folder "Data"
+mto_data <- haven::read_dta("Data/mto_sci_puf_cells_20130206.dta") 
+#acquired from http://data.nber.org/mtopuf/#PUF
+```
+
+# Q3. RMarkdown formatting.
+## Demonstrating two lines of Header! (first line)
+### Second line 
+
+**This phrase is in bold format**  
+
+* Example of an unordered list
+* No numbers, just bullet points
+  + adding sub-item to the second bullet point
+  + etc...  
+  
+1. Example of an ordered list
+2. List is numbered instead of bullets
+    a. Ordered sub-item
+    b. etc...  
+  
+# Adding an image
+image: ![](Misc./hw1_image.png)  
+
+# Example of Inline code
+Inserting an inline code using the tick mark followed by "r" which executes the
+inline code function embedded in Rstudio. In this example I have inserted the 
+date and time. The current date and time is `r Sys.time()`.  
+
+
+# Q4. Workflow: Basics
+```{r}
+
+my_variable <- 10
+#my_varıable <- commented out because it wont execute the knit process
+```
+my_variable is found because of "i". Characters are different hence Rstudio 
+only recognizes "my_variable" with a value of 10. "my_varıable" is not a value
+mentioned or stored before.  
+
+
+# Q5. Workflow: scripts.
+I was not aware of the option that lets us have multple windown open. The images
+attached shows the icon I used to open multiple windows.
+The option circled in red in the image is used to open multiple windows of the
+same Rproject. Image two shows the result.  
+
+image: ![](Misc./tip1.png)
+image: ![](Misc./tip2.png)  
+
+# Q6. Research Ethics
+I belive the **fifth Circle: Creative Use of Outliers** will be hardest one to
+comprehend. Researchers and scholars may have different understandings for what 
+qualifies to be removed from the analysis. It is widely accepted to remove
+participants who provide the same response to every stimuli.  
+
+I believe we can also remove participants who fail all the attention checks. But,
+I'm not sure if that's a clever option. Also, if they provide totally nonsensical
+response (ex. "apple" as response when their age was the appropriate response),
+can that data point or the participant responses be removed?  
+
